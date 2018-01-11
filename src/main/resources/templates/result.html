@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+ <html> 
+ <head> 
+ <meta charset="UTF-8"> 
+ <title>Hand results</title> 
+ </head> 
+ <body> 
+ <h1>Twenty-One</h1> 
+ 
+ <h2>Dealer hand</h2>
+  {{#game.dealerHand.getCards}}
+ 	<div>{{ face }} of {{ suit }}</div>
+ 	<br>
+ {{/game.dealerHand.getCards}}
+ 
+ <h2>Player hand</h2> 
+ {{#game.playerHand.getCards}}
+ 	<div>{{ face }} of {{ suit }}</div>
+ 	<br>
+ {{/game.playerHand.getCards}}
+ 
+ 
+<!--  <form method="post" action="/hit">  -->
+<!--  	<button>Hit me</button>  -->
+<!--  </form>  -->
+ <form method="post" action="/"> 
+ 	<button>Play again!</button> 
+ </form> 
+ <br> 
+ <div>You have ${{ game.getBankBalance }}</div> 
+<!-- <form method="post" action="/play">   -->
+<!-- <input required autofocus type="number" name="bet" max="{{ game.getBankBalance }}" min="0">  -->
+<!-- <button>Play again?</button>   -->
+<!-- </form>   -->
+<!--  <h1>Temporary view of a deck</h1> -->
+<!--  Number of cards in the deck: (( game.deck.cards.size )) **replaces parens with mustaches if needed-->
+ 
+ </body> 
+ </html> 

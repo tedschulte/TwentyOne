@@ -1,0 +1,17 @@
+ <!DOCTYPE html> 
+ <html> 
+ <head> 
+ <meta charset="UTF-8"> 
+ <title>Make Your Bet</title> 
+ </head> 
+ <body> 
+ 
+ 
+ <div>You have ${{ game.getBankBalance }}</div> 
+ <form method="post" action="/bet"> 
+<input required autofocus type="number" name="bet" max="{{ game.getBankBalance }}" min="0">  
+ 	<button>Bet</button> 
+ </form> 
+ 
+ </body> 
+ </html> 
